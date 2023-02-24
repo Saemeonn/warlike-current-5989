@@ -415,7 +415,7 @@ cursor: pointer;
     font-weight: 300;
     font-size: 20px;
   }
-  input{
+  .inputs{
     width: 100%;
     font-size: 13px;
     font-weight: 100;
@@ -672,6 +672,20 @@ section1{
     font-size: 18px;
   }
 
+
+
+  /* -----  CONTENT ---- */
+#content{
+  display: flex;
+}
+.section li{
+  /* display: flex; */
+  list-style: none;
+}
+.section ul
+
+.section ul li{
+}  
 
 
 

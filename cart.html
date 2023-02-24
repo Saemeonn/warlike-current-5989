@@ -6,16 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forever Teen Online Shopping Home Page</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
-    
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/Favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <!-- CSS -->
-    
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" >
+    <style>
+         #cart-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    width: 85%;
+    margin: auto;
+  }
+  #cart-container>div{
+    width: 100%;
+    margin-bottom: 50px;  
+  }
+  #cart-container>div>img{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.5;
+  }
+  #product-container>div:hover{
+    transform: translateY(-5px);
+  }
+
+  #cart-container>div p{
+    font-size: 19px;
+    padding: 10px;
+  }
+  #cart-container>div h5{
+    padding: 10px;
+    font-weight: 600;
+  }
+  #cart-container>div p:nth-last-child(3){
+    color: #818181;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #cart-container>div p:nth-last-child(2){
+    color: rgb(255, 140, 0);
+    font-size: 18px;
+    font-weight: bold;
+  }
+ 
+  #cart-container>div button{
+    margin: 2px;
+    background-color: rgb(255, 139, 7);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+  }
+  #cart-container>div button:hover{
+    background-color: rgb(255, 164, 78);
+  }
+  #cartbox{
+        min-height: 900px;
+        width: 90%;
+        margin: auto;
+      }
+      .row1{
+        margin-top: 250px;
+      }
+    </style>
     
 </head>
 <body>
@@ -28,7 +89,7 @@
                 
             </div>
             <div class="right flex items-center">
-                <input placeholder="Search for products" class="searchbar" id="search" autocomplete="off">
+                <a href="productPage.html"><input placeholder="Search for products" class="searchbar" ></a>
                 <h3 class="help">HELP</h3>
                 <div class="profile mx-2">
                     <a href="login.html"> <img src="profileBlack.png" alt=""></a>
@@ -716,51 +777,22 @@
             </ul>
         </nav>
     </header>
-    
-   <section1>
-        <div id="pc">
-            <h2>All Products</h2> <p><span id="pcount"></span>products found</p>
-        </div>
-        <div id="content">
-            <div id="filterbar">
-                <div>
-                    <div class="section">
-                        <div><h4>Sort By</h4></div>
-                            <ul>
-                                <div>
-                                    <li class="sectionli">
-                                        <input type="radio" id="rv" name="prices" value="" checked onclick="checkfill()">
-                                        <label for="htl">Relevance</label>
-                                    </li>
-                                <li class="sectionli">
-                                    <input type="radio" id="htl" name="prices" value="htl" onclick="checkfill()">
-                                    <label for="htl">Highest Priced First</label>
-                                </li>
-                                <li class="sectionli">
-                                    <input type="radio" id="lth" name="prices" value="lth" onclick="checkfill()">
-                                    <label for="lth">Lowest Priced First</label>
-                                </li>
-                                <li class="sectionli">
-                                    <input type="radio" id="newest" name="prices" value="" onclick="checkfill()">
-                                    <label for="newest">Newest</label>
-                                </li>
-                                </div>
-                            </ul>
 
-                        
-                    </div>
-                </div>
-            </div>
-            <div>
-            <div id="product-container">
-            </div>
+    <div id="cartbox">
+    <div class="row1">
+        
+        <div id="pc">
+            <h2>All Products</h2> <p>Your Cart<span id="pcount"></span></p>
         </div>
     </div>
-   </section1>
+    <div class="smallContainer container">
+        <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+    <div id="cart-container">
+        <!-- Here Append All the cart Products  -->
+      </div>
+</div>
+</div>
 
- 
-  
-   
 
     <!-- ------- footer -------- --> 
 
@@ -812,9 +844,9 @@
                     <!-- <h4>KEEP IN TOUCH</h4>
                     <img class="keep" src="/keepintouch.PNG"> -->
                 </div>
-                <!-- <div>
+                <div>
                     <img src="/waranty.PNG" alt="">
-                </div> -->
+                </div>
             </div>
             <hr>
             <div>
@@ -841,187 +873,79 @@
             </div>
         </div>
     </div>
+  
 </body>
 <script>
-    let selected = document.createElement("p")
-    let findselected = () =>{
-        let selectedin = document.querySelector("input[name='prices']:checked");
-        selected.innerText = selectedin.value
-        console.log(selectedin.value);
-    }
-    let radioBtns = document.querySelectorAll("input[name='prices']");
-    radioBtns.forEach(radioBtn => {
-        radioBtn.addEventListener("change", findselected);
-    });
-    findselected()
-    const API = "https://63f13ef25703e063fa54de01.mockapi.io/data";
-   
-    function filterData(data){
-      let filterValue = filterBy.value
-      if(filterValue === ""){
-        displayProduct(data)
-      }
-      else {
-        data=data.filter(data =>{
-          //it will return boolean value
-          return data.category===filterValue;
-        })
-        displayProduct(data);
-      }
-    }
-
-
-    //SEARCHBAR FILTER
-
-
+    let Cart = JSON.parse(localStorage.getItem("cart"))||[];
+    let container = document.getElementById("cart-container");
     let pc =document.getElementById("pcount")
-    let searchForm = document.getElementById("search")
 
-let fetchitems = [];
-asyncFetch();
-
-function checkfill(){
-    console.log("called");
-  asyncFetch();  
-}
-
-searchForm.addEventListener("keyup", (e) =>{
-    e.preventDefault();
-    let searchParams = e.target.value
-    if(e.keyCode === 13){
-    //   console.log(e.target.value);
-      let filtered = fetchitems.filter((Products) =>{
-        if(Products.name.toUpperCase().includes(e.target.value.toUpperCase())=== true){
-            return true;
-        }
-        else{
-            return false;
-        }
-    });
-    displayProduct(filtered);
-    }
-    else if(e.keycode === null){
-        displayProduct()
-    }
-   
-});
-function thenFetch() {
-        fetch(API)
-        .then((request) =>{
-            return request.json();
-        })
-        .then((data) =>{
-            // console.log(data)
-        })
-        .catch((err) =>{
-            console.log(err);
-        });
-    };
-async function asyncFetch(){
-        try {
-            let request = await fetch(API);
-            let data = await request.json();
-            fetchitems = data.map(function (data) {
-                return{
-                  img: data.img,
-                    name: data.name,
-                    price: data.price,
-                    material: data.material,
-                    id: data.id,
-                    detail: data.desc
-                };
-            });
-            if(selected.innerText==""){
-            displayProduct(fetchitems)
-            console.log(fetchitems)
-            }
-            else {
-                filterer(fetchitems)
-                console.log(fetchitems)
-            }
-           
-            // displayProduct(fetchitems);
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
-function filterer(data) {
-    if(selected.innerText=="htl"){
-        console.log("working");
-        let sortedData = data.sort(function (a,b) {
-            return b.price - a.price
-        });
-        displayProduct(sortedData)
-    }
-    else if(selected.innerText=="lth"){
-        let sortedData = data.sort(function (a,b){
-            return a.price - b.price
-        });
-        displayProduct(sortedData);
-    }
-}
-
-
-
-
-
-
-
-    let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
-    let container = document.getElementById("product-container")
-
-//    fetchData();
-    function displayProduct(data){
-        pc.innerText=data.length
+    function displayProduct(data) {
+      let total = document.getElementById("cart-total")
+      pc.innerText=`(${Cart.length}  Items)`
       container.innerHTML= "";
-      data.forEach(data => {
-        let card = document.createElement("div")
+      Cart.forEach((product) => {
+        let card = document.createElement("div");
 
         let img = document.createElement("img");
-        img.src = data.img;
+        img.src = product.img;
 
-        let brand = document.createElement("h5");
-        brand.textContent = data.name;
+        let brand = document.createElement("h3");
+        brand.textContent = product.name;
 
         let category = document.createElement("p");
-        category.textContent = data.material;
+        category.textContent = product.category;
 
         let detail = document.createElement("p");
-        detail.textContent = data.desc;
+        detail.textContent = product.desc;
 
-        let price = document.createElement("p")
-        price.textContent = `₹${data.price}`
+        let price = document.createElement("h5")
+        price.textContent = `$${product.price}`;
+
+        let quantity = document.createElement("span")
+        quantity.textContent = product.quantity
+
+        let remove = document.createElement("button")
+        remove.textContent = "Remove";
+
+        let increment = document.createElement("button")
+        increment.textContent = "+";
+
+        let decrement = document.createElement("button")
+        decrement.textContent = "-";
         
-
-        let add_to_cart = document.createElement("button")
-        add_to_cart.textContent = "Add To Cart";
-
-        add_to_cart.addEventListener("click", () =>{
-          if(checkDuplicate(data)){
-            alert("Product Already in cart")
-          }
-          else{
-            cartArr.push({...data,quantity:1})
-            localStorage.setItem("cart",JSON.stringify(cartArr))
-            alert("Product added to cart")
-          }
-        })
-
-        card.append(img,brand,category,price,add_to_cart);
-        container.append(card);
-      });
-    };
-
-    
-    console.log(pc.innerText);
-    function checkDuplicate(data){
-      for (let i=0; i<cartArr.length;i++){
-        if(cartArr[i].id===data.id){
-          return true
+        let btndiv = document.createElement("div")
+        remove.addEventListener("click", () =>{
+          Cart=Cart.filter((ele) =>{
+              return ele.id!==product.id
+          })
+          localStorage.setItem("cart",JSON.stringify(Cart))
+          displayProduct()
+        });
+        increment.addEventListener("click", () =>{
+          product=product.quantity++
+          localStorage.setItem("cart",JSON.stringify(Cart))
+          displayProduct();
+        });
+        decrement.addEventListener("click", () =>{
+          if(product.quantity>1){
+          product=product.quantity--
+          localStorage.setItem("cart",JSON.stringify(Cart))
+          displayProduct()
         }
+        });
+        btndiv.append(increment,quantity,decrement,remove)
+        card.append(img,brand,price,detail,category, btndiv);
+        container.append(card)
+      });
+
+      let sum=0
+      for(let i=0;i<Cart.length;i++){
+        sum+=Cart[i].price*Cart[i].quantity
       }
-      return false
+      total.textContent=sum
+
     }
+    displayProduct()
 </script>
 </html>

@@ -13,40 +13,35 @@
 </head>
 <body>
     <ul>
-        <li>
-            <input type="radio" checked="checked">
-            <label for="ranking-desc">
-                ::before
-                "Relevance"
-            </label>
-        </li>
-        <li>
-            <input type="radio" checked="checked">
-            <label for="ranking-desc">
-                ::before
-                "Relevance"
-            </label>
-        </li>
-        <li>
-            <input type="radio" checked="checked">
-            <label for="ranking-desc">
-                ::before
-                "Relevance"
-            </label>
-        </li>
-        <li>
-            <input type="radio" checked="checked">
-            <label for="ranking-desc">
-                ::before
-                "Relevance"
-            </label>
-        </li>
-        <li>
-            <input type="checkbox" >
-            <label for="ranking-desc">
-                Relevance
-            </label>
-        </li>
+        <form action="">
+        <div>
+            <li class="sectionli">
+                <input type="radio" id="htl" name="hightolow" value="htl" onclick="isChecked()" checked>
+                <label for="htl">Highest Priced First</label>
+            </li>
+            <li class="sectionli">
+                <input type="radio" id="lth" name="lowtohigh" value="lth">
+                <label for="lth">Lowest Priced First</label>
+            </li>
+            <li class="sectionli">
+                <input type="radio" id="newest" name="newest" value="newest">
+                <label for="newest">Newest</label>
+            </li>
+            </div>
+        </form>
     </ul>
 </body>
+<script>
+    function myFunction() {
+  var coffee = document.forms[0];
+  var txt = "";
+  var i;
+  for (i = 0; i < coffee.length; i++) {
+    if (coffee[i].checked) {
+      txt = txt + coffee[i].value + " ";
+    }
+  }
+  document.getElementById("order").value = "You ordered a coffee with: " + txt;
+}
+</script>
 </html>

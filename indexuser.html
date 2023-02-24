@@ -354,10 +354,10 @@
 
     getname(USData)
     function getname(data) {
-        for(let i=0;i<data.length;i++){
-            for(let j=0;j<data.length;j++){
+        for(let i=0;i<1;i++){
+            for(let j=0;j<1;j++){
                 if(i===0 && j===0){
-                    disname.innerText = data[i].name[j].toUpperCase()
+                    disname.innerText = data[0].name[0].toUpperCase()
                     console.log(disname.innerText);
                 }
             }
@@ -366,15 +366,15 @@
     }
     function display(data){
       info.innerHTML=""
-      for(let i=0;i<data.length;i++){
+      for(let i=0;i<1;i++){
         let name = document.createElement("h5");
         let logo = document.createElement("div")
         let logoname = document.createElement("h3")
         let number = document.createElement("p");
         let hold = document.createElement("div")
 
-        name.innerText = data[i].name;
-        number.innerText = data[i].number
+        name.innerText = data[0].name;
+        number.innerText = data[0].number
         console.log(name.innerText);
 
         logoname.innerText=disname
