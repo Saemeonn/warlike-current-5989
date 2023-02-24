@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: ;
+               }
+    </style>
+</head>
+<body>
+    <ul>
+        <form action="">
+        <div>
+            <li class="sectionli">
+                <input type="radio" id="htl" name="hightolow" value="htl" onclick="isChecked()" checked>
+                <label for="htl">Highest Priced First</label>
+            </li>
+            <li class="sectionli">
+                <input type="radio" id="lth" name="lowtohigh" value="lth">
+                <label for="lth">Lowest Priced First</label>
+            </li>
+            <li class="sectionli">
+                <input type="radio" id="newest" name="newest" value="newest">
+                <label for="newest">Newest</label>
+            </li>
+            </div>
+        </form>
+    </ul>
+</body>
+<script>
+    function myFunction() {
+  var coffee = document.forms[0];
+  var txt = "";
+  var i;
+  for (i = 0; i < coffee.length; i++) {
+    if (coffee[i].checked) {
+      txt = txt + coffee[i].value + " ";
+    }
+  }
+  document.getElementById("order").value = "You ordered a coffee with: " + txt;
+}
+</script>
+</html>

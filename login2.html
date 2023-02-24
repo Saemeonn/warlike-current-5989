@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wood Coaster Login</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" >
+    
+</head>
+<body>
+    
+    <header id="header" class="container">
+        <!-- ------- Navigation Bar -------- --> 
+        <nav class="flex space-bet ">
+            <div class="left">
+                <a href="index.html"><img src="/WoodCoaster.png" alt="/"></a>
+                
+            </div>
+            <div class="right flex items-center">
+                <a href="productPage.html"><input placeholder="Search for products" class="searchbar" ></a>
+                <h3 class="help">HELP</h3>
+                <!-- <div class="profile mx-2">
+                    <a href="login.html"> <img src="profileBlack.png" alt=""></a>
+                   
+                   
+                </div> -->
+                <div class="wishlist mx-2">
+                    <a href=""><img src="—Pngtree—vector heart icon_4187108.png" alt=""></a>
+                   
+                </div>
+                <div class="bag mx-2">
+                    <a href="cart.html"><img src="bag-png-33933.png" alt=""> </a>
+                </div>
+               
+                    <img src="menubar.PNG" class="menu-icon" onclick="menutoggle()"> 
+            
+            </div>
+        </nav>
+        <nav class="cate">
+            <ul>
+                <li class="active"><a href="">Furniture </a>
+                    <div class="sub-menu1">
+                        <div>
+                            <ul>
+                                <h1>Sofas</h1>
+                                <li><a href="/Mens.html">3 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">2 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">1 Seater Sofast</a></li>
+                                <li><a href="/Mens.html">Sofas Sets</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <h1>Gaming Chairs</h1>
+                                <li><a href="Gaming.html">Simple Base</a></li>
+                                <li><a href="Gaming.html">Recliner</a></li>
+                                <li><a href="Gaming.html">Sport Kit</a></li>
+                                <li><a href="Gaming.html">Automated</a></li>
+                                <li><a href="Gaming.html">Premium Av</a></li>
+                            </ul>
+                        </div>    
+                          <div>
+                            <ul>
+                                <h1>Beds</h1>
+                                <li><a href="beds.html">Queen Size Beds</a></li>
+                                <li><a href="beds.html">King Size Beds</a></li>
+                                <li><a href="beds.html">Single Beds</a></li>
+                                <li><a href="beds.html">Poster Beds</a></li>
+                                <li><a href="beds.html">Folding Beds</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Wardrobes</h1>
+                                <li><a href="wardrobe.html">1 Door</a></li>
+                                <li><a href="wardrobe.html">2 Door</a></li>
+                                <li><a href="wardrobe.html">3 Door</a></li>
+                                <li><a href="wardrobe.html">4 Door</a></li>
+                                <li><a href="wardrobe.html">4 + Door</a></li>
+                                <li><a href="wardrobe.html">Sliding Door</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Dressing Tables</h1>
+                                <li><a href="tables.html">Dressers</a></li>
+                                <li><a href="tables.html">Dressing Cabinets</a></li>
+                                <li><a href="tables.html">Dressing Units</a></li>
+                            </ul>
+                          </div>  
+                           <div>
+                            <ul>
+                                <h1>Study Tables</h1>
+                                <li><a href="tables.html">Writing Tables</a></li>
+                                <li><a href="tables.html">Computer Tables</a></li>
+                                <li><a href="tables.html">Hutch Desks</a></li>
+                                <li><a href="tables.html">Foldable Table</a></li>
+                                <li><a href="tables.html">Wall Mounted</a></li>
+                                <li><a href="tables.html">Portable Tables</a></li>
+                            </ul>
+                           </div>
+                        
+                        <div>
+                </li>
+                <li class="active"><a href=""> Home Décor</a></li>
+                <li class="active"><a href="">Lamps & Lighting</a></li>
+                <li class="active"><a href="">Kitchen & Dining</a></li>
+                <li class="active"><a href="">Furnishings</a></li>
+                <li class="active"><a href="">Matresses</a></li>
+                <li class="active"><a href="">Appliances</a></li>
+                <li class="active"><a href="">Pets</a></li>
+                <li class="active"><a href="">Modular</a></li>
+                <li class="active"><a href="">Gift Cards</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="login">
+        <div>
+        <div class="register">
+                <img src="/register.png" alt="">
+        </div>
+        <div class="info">
+            <form>
+            <div class="inp-field">
+                <input type="email" placeholder="Email ID" id="Email" class="inputs">
+            </div>
+            <div id="currentpass">
+                <input type="password" placeholder="Password" id="CPW" autocomplete="on" class="inputs">
+                <img src="eye-close.png" id="eyeicon">
+            </div>
+            <a href=""> <button id="loginn" class="login-btn" type="button" >CONTINUE</button></a>
+            <p>By continuing, You agree to the <a href="">Terms of Use</a> </p>
+            <!-- <div id="log">
+                <a href=""><button id="login">Exiting User? Log in</button></a>
+            </div> -->
+            
+            <p>Have Trouble Logging In? <a href="">Get help</a></p> 
+            </form>
+        </div>
+    </div>
+    </div>
+
+    
+
+ 
+</body>
+<script>
+//     var menuItems = document.getElementById("menuItems");
+//         menuItems.style.maxHeight = "50px";
+
+//     function menutoggle(){
+//         if(menuItems.style.maxHeight == "0px"){
+//             menuItems.style.maxHeight = "200px";
+//         }
+//         else{
+//             menuItems.style.maxHeight = "0px";
+//         }
+// }
+let LSData = JSON.parse(localStorage.getItem("account-data"))||[]
+let USData = JSON.parse(localStorage.getItem("user-data"))||[]
+
+    let eyeicon = document.getElementById("eyeicon");
+    let emailInp = document.getElementById("Email");
+    let passInp = document.getElementById("CPW");
+    let login = document.getElementById("loginn");
+    var url = "indexuser.html"
+    
+
+    login.onclick = () => {
+        let psl = passInp.value
+        if(psl.length > 6){        
+        swal("Succesfully Registered!", "Now You Can Login To Your New Account!", "success");
+        display(LSData)
+        return false;
+    }
+    else if(psl.length <=6){
+        swal("Incorrect Email or Password");
+        return false;
+    }
+    }
+  
+
+    function display(data){
+      
+      for(let i=0;i<data.length;i++){
+        console.log(data[i]);
+      if(emailInp.value===data[i].email && passInp.value===data[i].password){
+        let formData ={
+            name: data[i].name,
+            number: data[i].number,
+        }
+        USData.push(formData)
+        localStorage.setItem("user-data", JSON.stringify(USData))
+        swal("You Are Now Logged In!");
+       window.location = url;
+      }
+      else{
+        swal("Incorrect Email or Password");
+      }
+      }
+      
+    }
+   
+
+    eyeicon.onclick = function(){
+        if(passInp.type == "password"){
+            passInp.type = "text";
+            eyeicon.src = "eye-open.png"
+        }else{
+            passInp.type ="password"
+            eyeicon.src = "eye-close.png"
+        }
+    }
+   
+  
+
+
+
+</script>
+<script src="./sweetalert.js"></script>
+</html>

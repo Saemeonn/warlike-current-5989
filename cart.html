@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Teen Online Shopping Home Page</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" >
+    <style>
+         #cart-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    width: 85%;
+    margin: auto;
+  }
+  #cart-container>div{
+    width: 100%;
+    margin-bottom: 50px;  
+  }
+  #cart-container>div>img{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.5;
+  }
+  #product-container>div:hover{
+    transform: translateY(-5px);
+  }
+
+  #cart-container>div p{
+    font-size: 19px;
+    padding: 10px;
+  }
+  #cart-container>div h5{
+    padding: 10px;
+    font-weight: 600;
+  }
+  #cart-container>div p:nth-last-child(3){
+    color: #818181;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #cart-container>div p:nth-last-child(2){
+    color: rgb(255, 140, 0);
+    font-size: 18px;
+    font-weight: bold;
+  }
+ 
+  #cart-container>div button{
+    margin: 2px;
+    background-color: rgb(255, 139, 7);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+  }
+  #cart-container>div button:hover{
+    background-color: rgb(255, 164, 78);
+  }
+  #cartbox{
+        min-height: 900px;
+        width: 90%;
+        margin: auto;
+      }
+      .row1{
+        margin-top: 250px;
+      }
+    </style>
+    
+</head>
+<body>
+    
+    <header id="header" class="container">
+        <!-- ------- Navigation Bar -------- --> 
+        <nav class="flex space-bet ">
+            <div class="left">
+                <a href="index.html"><img src="/WoodCoaster.png" alt="/"></a>
+                
+            </div>
+            <div class="right flex items-center">
+                <a href="productPage.html"><input placeholder="Search for products" class="searchbar" ></a>
+                <h3 class="help">HELP</h3>
+                <div class="profile mx-2">
+                    <a href="login.html"> <img src="profileBlack.png" alt=""></a>
+                   
+                   
+                </div>
+                <div class="wishlist mx-2">
+                    <a href=""><img src="—Pngtree—vector heart icon_4187108.png" alt=""></a>
+                   
+                </div>
+                <div class="bag mx-2">
+                    <a href="cart.html"><img src="bag-png-33933.png" alt=""> </a>
+                </div>
+               
+                    <img src="menubar.PNG" class="menu-icon" onclick="menutoggle()"> 
+            
+            </div>
+        </nav>
+        <nav class="cate">
+            <ul>
+                <li class="active"><a href="">Furniture </a>
+                    <div class="sub-menu1">
+                        <div>
+                            <ul>
+                                <h1>Sofas</h1>
+                                <li><a href="/Mens.html">3 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">2 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">1 Seater Sofast</a></li>
+                                <li><a href="/Mens.html">Sofas Sets</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <h1>Gaming Chairs</h1>
+                                <li><a href="Gaming.html">Simple Base</a></li>
+                                <li><a href="Gaming.html">Recliner</a></li>
+                                <li><a href="Gaming.html">Sport Kit</a></li>
+                                <li><a href="Gaming.html">Automated</a></li>
+                                <li><a href="Gaming.html">Premium Av</a></li>
+                            </ul>
+                        </div>    
+                          <div>
+                            <ul>
+                                <h1>Beds</h1>
+                                <li><a href="beds.html">Queen Size Beds</a></li>
+                                <li><a href="beds.html">King Size Beds</a></li>
+                                <li><a href="beds.html">Single Beds</a></li>
+                                <li><a href="beds.html">Poster Beds</a></li>
+                                <li><a href="beds.html">Folding Beds</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Wardrobes</h1>
+                                <li><a href="wardrobe.html">1 Door</a></li>
+                                <li><a href="wardrobe.html">2 Door</a></li>
+                                <li><a href="wardrobe.html">3 Door</a></li>
+                                <li><a href="wardrobe.html">4 Door</a></li>
+                                <li><a href="wardrobe.html">4 + Door</a></li>
+                                <li><a href="wardrobe.html">Sliding Door</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Dressing Tables</h1>
+                                <li><a href="tables.html">Dressers</a></li>
+                                <li><a href="tables.html">Dressing Cabinets</a></li>
+                                <li><a href="tables.html">Dressing Units</a></li>
+                            </ul>
+                          </div>  
+                           <div>
+                            <ul>
+                                <h1>Study Tables</h1>
+                                <li><a href="tables.html">Writing Tables</a></li>
+                                <li><a href="tables.html">Computer Tables</a></li>
+                                <li><a href="tables.html">Hutch Desks</a></li>
+                                <li><a href="tables.html">Foldable Table</a></li>
+                                <li><a href="tables.html">Wall Mounted</a></li>
+                                <li><a href="tables.html">Portable Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Out Door</h1>
+                                <li><a href="">Swings</a></li>
+                                <li><a href=""></a>Hammocks</li>
+                                <li><a href=""></a>Tables</li>
+                                <li><a href=""></a>Table & Chair Sets</li>
+                                <li><a href=""></a>Seating</li>
+                                <li><a href=""></a>Plastic Chairs</li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Side Tables</h1>
+                                <li><a href="">End Tables</a></li>
+                                <li><a href="">C Chaped Tables</a></li>
+                                <li><a href="">Console Tables</a></li>
+                                <li><a href="">Nest of Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Settees & Benches</h1>
+                                <li><a href="">Settees</a></li>
+                                <li><a href="">Benches</a></li>
+                                <li><a href="">Recamiers</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Sectional Sofas</h1>
+                                <li><a href="">LHS sectionals</a></li>
+                                <li><a href="">RHS Sectionals</a></li>
+                                <li><a href="">Corner Sofas</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul><h1>Bean Bags</h1></ul>
+                           </div>
+                           <div><ul><h1>Shoe Racks</h1>
+                            <li><a href="">Shoe cabinets</a></li>
+                            <li><a href="">Open Shoe Racks</a></li>
+                            <li><a href="">Shoe Rack & Seat</a></li>
+                            <li><a href="">Tilt Out Racks</a></li>
+                        </ul></div>
+                        <div><ul><h1>Book Shelves</h1></ul></div>
+                        
+                        </div>
+                </li>
+                <li class="active"><a href=""> Home Décor</a>
+                    <div class="sub-menu1">
+                        <div>
+                            <ul>
+                                <h1>Sofas</h1>
+                                <li><a href="/Mens.html">3 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">2 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">1 Seater Sofast</a></li>
+                                <li><a href="/Mens.html">Sofas Sets</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <h1>Gaming Chairs</h1>
+                                <li><a href="Gaming.html">Simple Base</a></li>
+                                <li><a href="Gaming.html">Recliner</a></li>
+                                <li><a href="Gaming.html">Sport Kit</a></li>
+                                <li><a href="Gaming.html">Automated</a></li>
+                                <li><a href="Gaming.html">Premium Av</a></li>
+                            </ul>
+                        </div>    
+                          <div>
+                            <ul>
+                                <h1>Beds</h1>
+                                <li><a href="beds.html">Queen Size Beds</a></li>
+                                <li><a href="beds.html">King Size Beds</a></li>
+                                <li><a href="beds.html">Single Beds</a></li>
+                                <li><a href="beds.html">Poster Beds</a></li>
+                                <li><a href="beds.html">Folding Beds</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Wardrobes</h1>
+                                <li><a href="wardrobe.html">1 Door</a></li>
+                                <li><a href="wardrobe.html">2 Door</a></li>
+                                <li><a href="wardrobe.html">3 Door</a></li>
+                                <li><a href="wardrobe.html">4 Door</a></li>
+                                <li><a href="wardrobe.html">4 + Door</a></li>
+                                <li><a href="wardrobe.html">Sliding Door</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Dressing Tables</h1>
+                                <li><a href="tables.html">Dressers</a></li>
+                                <li><a href="tables.html">Dressing Cabinets</a></li>
+                                <li><a href="tables.html">Dressing Units</a></li>
+                            </ul>
+                          </div>  
+                           <div>
+                            <ul>
+                                <h1>Study Tables</h1>
+                                <li><a href="tables.html">Writing Tables</a></li>
+                                <li><a href="tables.html">Computer Tables</a></li>
+                                <li><a href="tables.html">Hutch Desks</a></li>
+                                <li><a href="tables.html">Foldable Table</a></li>
+                                <li><a href="tables.html">Wall Mounted</a></li>
+                                <li><a href="tables.html">Portable Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Out Door</h1>
+                                <li><a href="">Swings</a></li>
+                                <li><a href=""></a>Hammocks</li>
+                                <li><a href=""></a>Tables</li>
+                                <li><a href=""></a>Table & Chair Sets</li>
+                                <li><a href=""></a>Seating</li>
+                                <li><a href=""></a>Plastic Chairs</li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Side Tables</h1>
+                                <li><a href="">End Tables</a></li>
+                                <li><a href="">C Chaped Tables</a></li>
+                                <li><a href="">Console Tables</a></li>
+                                <li><a href="">Nest of Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Settees & Benches</h1>
+                                <li><a href="">Settees</a></li>
+                                <li><a href="">Benches</a></li>
+                                <li><a href="">Recamiers</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Sectional Sofas</h1>
+                                <li><a href="">LHS sectionals</a></li>
+                                <li><a href="">RHS Sectionals</a></li>
+                                <li><a href="">Corner Sofas</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul><h1>Bean Bags</h1></ul>
+                           </div>
+                           <div><ul><h1>Shoe Racks</h1>
+                            <li><a href="">Shoe cabinets</a></li>
+                            <li><a href="">Open Shoe Racks</a></li>
+                            <li><a href="">Shoe Rack & Seat</a></li>
+                            <li><a href="">Tilt Out Racks</a></li>
+                        </ul></div>
+                        <div><ul><h1>Book Shelves</h1></ul></div>
+                        
+                        </div>
+                </li>
+                <li class="active"><a href="">Lamps & Lighting</a>
+                    <div class="sub-menu1">
+                        <div>
+                            <ul>
+                                <h1>Sofas</h1>
+                                <li><a href="/Mens.html">3 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">2 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">1 Seater Sofast</a></li>
+                                <li><a href="/Mens.html">Sofas Sets</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <h1>Gaming Chairs</h1>
+                                <li><a href="Gaming.html">Simple Base</a></li>
+                                <li><a href="Gaming.html">Recliner</a></li>
+                                <li><a href="Gaming.html">Sport Kit</a></li>
+                                <li><a href="Gaming.html">Automated</a></li>
+                                <li><a href="Gaming.html">Premium Av</a></li>
+                            </ul>
+                        </div>    
+                          <div>
+                            <ul>
+                                <h1>Beds</h1>
+                                <li><a href="beds.html">Queen Size Beds</a></li>
+                                <li><a href="beds.html">King Size Beds</a></li>
+                                <li><a href="beds.html">Single Beds</a></li>
+                                <li><a href="beds.html">Poster Beds</a></li>
+                                <li><a href="beds.html">Folding Beds</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Wardrobes</h1>
+                                <li><a href="wardrobe.html">1 Door</a></li>
+                                <li><a href="wardrobe.html">2 Door</a></li>
+                                <li><a href="wardrobe.html">3 Door</a></li>
+                                <li><a href="wardrobe.html">4 Door</a></li>
+                                <li><a href="wardrobe.html">4 + Door</a></li>
+                                <li><a href="wardrobe.html">Sliding Door</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Dressing Tables</h1>
+                                <li><a href="tables.html">Dressers</a></li>
+                                <li><a href="tables.html">Dressing Cabinets</a></li>
+                                <li><a href="tables.html">Dressing Units</a></li>
+                            </ul>
+                          </div>  
+                           <div>
+                            <ul>
+                                <h1>Study Tables</h1>
+                                <li><a href="tables.html">Writing Tables</a></li>
+                                <li><a href="tables.html">Computer Tables</a></li>
+                                <li><a href="tables.html">Hutch Desks</a></li>
+                                <li><a href="tables.html">Foldable Table</a></li>
+                                <li><a href="tables.html">Wall Mounted</a></li>
+                                <li><a href="tables.html">Portable Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Out Door</h1>
+                                <li><a href="">Swings</a></li>
+                                <li><a href=""></a>Hammocks</li>
+                                <li><a href=""></a>Tables</li>
+                                <li><a href=""></a>Table & Chair Sets</li>
+                                <li><a href=""></a>Seating</li>
+                                <li><a href=""></a>Plastic Chairs</li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Side Tables</h1>
+                                <li><a href="">End Tables</a></li>
+                                <li><a href="">C Chaped Tables</a></li>
+                                <li><a href="">Console Tables</a></li>
+                                <li><a href="">Nest of Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Settees & Benches</h1>
+                                <li><a href="">Settees</a></li>
+                                <li><a href="">Benches</a></li>
+                                <li><a href="">Recamiers</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Sectional Sofas</h1>
+                                <li><a href="">LHS sectionals</a></li>
+                                <li><a href="">RHS Sectionals</a></li>
+                                <li><a href="">Corner Sofas</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul><h1>Bean Bags</h1></ul>
+                           </div>
+                           <div><ul><h1>Shoe Racks</h1>
+                            <li><a href="">Shoe cabinets</a></li>
+                            <li><a href="">Open Shoe Racks</a></li>
+                            <li><a href="">Shoe Rack & Seat</a></li>
+                            <li><a href="">Tilt Out Racks</a></li>
+                        </ul></div>
+                        <div><ul><h1>Book Shelves</h1></ul></div>
+                        
+                        </div>
+                </li>
+                <li class="active"><a href="">Kitchen & Dining</a>
+                    <div class="sub-menu1">
+                        <div>
+                            <ul>
+                                <h1>Sofas</h1>
+                                <li><a href="/Mens.html">3 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">2 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">1 Seater Sofast</a></li>
+                                <li><a href="/Mens.html">Sofas Sets</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <h1>Gaming Chairs</h1>
+                                <li><a href="Gaming.html">Simple Base</a></li>
+                                <li><a href="Gaming.html">Recliner</a></li>
+                                <li><a href="Gaming.html">Sport Kit</a></li>
+                                <li><a href="Gaming.html">Automated</a></li>
+                                <li><a href="Gaming.html">Premium Av</a></li>
+                            </ul>
+                        </div>    
+                          <div>
+                            <ul>
+                                <h1>Beds</h1>
+                                <li><a href="beds.html">Queen Size Beds</a></li>
+                                <li><a href="beds.html">King Size Beds</a></li>
+                                <li><a href="beds.html">Single Beds</a></li>
+                                <li><a href="beds.html">Poster Beds</a></li>
+                                <li><a href="beds.html">Folding Beds</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Wardrobes</h1>
+                                <li><a href="wardrobe.html">1 Door</a></li>
+                                <li><a href="wardrobe.html">2 Door</a></li>
+                                <li><a href="wardrobe.html">3 Door</a></li>
+                                <li><a href="wardrobe.html">4 Door</a></li>
+                                <li><a href="wardrobe.html">4 + Door</a></li>
+                                <li><a href="wardrobe.html">Sliding Door</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Dressing Tables</h1>
+                                <li><a href="tables.html">Dressers</a></li>
+                                <li><a href="tables.html">Dressing Cabinets</a></li>
+                                <li><a href="tables.html">Dressing Units</a></li>
+                            </ul>
+                          </div>  
+                           <div>
+                            <ul>
+                                <h1>Study Tables</h1>
+                                <li><a href="tables.html">Writing Tables</a></li>
+                                <li><a href="tables.html">Computer Tables</a></li>
+                                <li><a href="tables.html">Hutch Desks</a></li>
+                                <li><a href="tables.html">Foldable Table</a></li>
+                                <li><a href="tables.html">Wall Mounted</a></li>
+                                <li><a href="tables.html">Portable Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Out Door</h1>
+                                <li><a href="">Swings</a></li>
+                                <li><a href=""></a>Hammocks</li>
+                                <li><a href=""></a>Tables</li>
+                                <li><a href=""></a>Table & Chair Sets</li>
+                                <li><a href=""></a>Seating</li>
+                                <li><a href=""></a>Plastic Chairs</li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Side Tables</h1>
+                                <li><a href="">End Tables</a></li>
+                                <li><a href="">C Chaped Tables</a></li>
+                                <li><a href="">Console Tables</a></li>
+                                <li><a href="">Nest of Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Settees & Benches</h1>
+                                <li><a href="">Settees</a></li>
+                                <li><a href="">Benches</a></li>
+                                <li><a href="">Recamiers</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Sectional Sofas</h1>
+                                <li><a href="">LHS sectionals</a></li>
+                                <li><a href="">RHS Sectionals</a></li>
+                                <li><a href="">Corner Sofas</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul><h1>Bean Bags</h1></ul>
+                           </div>
+                           <div><ul><h1>Shoe Racks</h1>
+                            <li><a href="">Shoe cabinets</a></li>
+                            <li><a href="">Open Shoe Racks</a></li>
+                            <li><a href="">Shoe Rack & Seat</a></li>
+                            <li><a href="">Tilt Out Racks</a></li>
+                        </ul></div>
+                        <div><ul><h1>Book Shelves</h1></ul></div>
+                        
+                        </div>
+                </li>
+                <li class="active"><a href="">Furnishings</a>
+                    <div class="sub-menu1">
+                        <div>
+                            <ul>
+                                <h1>Sofas</h1>
+                                <li><a href="/Mens.html">3 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">2 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">1 Seater Sofast</a></li>
+                                <li><a href="/Mens.html">Sofas Sets</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <h1>Gaming Chairs</h1>
+                                <li><a href="Gaming.html">Simple Base</a></li>
+                                <li><a href="Gaming.html">Recliner</a></li>
+                                <li><a href="Gaming.html">Sport Kit</a></li>
+                                <li><a href="Gaming.html">Automated</a></li>
+                                <li><a href="Gaming.html">Premium Av</a></li>
+                            </ul>
+                        </div>    
+                          <div>
+                            <ul>
+                                <h1>Beds</h1>
+                                <li><a href="beds.html">Queen Size Beds</a></li>
+                                <li><a href="beds.html">King Size Beds</a></li>
+                                <li><a href="beds.html">Single Beds</a></li>
+                                <li><a href="beds.html">Poster Beds</a></li>
+                                <li><a href="beds.html">Folding Beds</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Wardrobes</h1>
+                                <li><a href="wardrobe.html">1 Door</a></li>
+                                <li><a href="wardrobe.html">2 Door</a></li>
+                                <li><a href="wardrobe.html">3 Door</a></li>
+                                <li><a href="wardrobe.html">4 Door</a></li>
+                                <li><a href="wardrobe.html">4 + Door</a></li>
+                                <li><a href="wardrobe.html">Sliding Door</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Dressing Tables</h1>
+                                <li><a href="tables.html">Dressers</a></li>
+                                <li><a href="tables.html">Dressing Cabinets</a></li>
+                                <li><a href="tables.html">Dressing Units</a></li>
+                            </ul>
+                          </div>  
+                           <div>
+                            <ul>
+                                <h1>Study Tables</h1>
+                                <li><a href="tables.html">Writing Tables</a></li>
+                                <li><a href="tables.html">Computer Tables</a></li>
+                                <li><a href="tables.html">Hutch Desks</a></li>
+                                <li><a href="tables.html">Foldable Table</a></li>
+                                <li><a href="tables.html">Wall Mounted</a></li>
+                                <li><a href="tables.html">Portable Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Out Door</h1>
+                                <li><a href="">Swings</a></li>
+                                <li><a href=""></a>Hammocks</li>
+                                <li><a href=""></a>Tables</li>
+                                <li><a href=""></a>Table & Chair Sets</li>
+                                <li><a href=""></a>Seating</li>
+                                <li><a href=""></a>Plastic Chairs</li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Side Tables</h1>
+                                <li><a href="">End Tables</a></li>
+                                <li><a href="">C Chaped Tables</a></li>
+                                <li><a href="">Console Tables</a></li>
+                                <li><a href="">Nest of Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Settees & Benches</h1>
+                                <li><a href="">Settees</a></li>
+                                <li><a href="">Benches</a></li>
+                                <li><a href="">Recamiers</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Sectional Sofas</h1>
+                                <li><a href="">LHS sectionals</a></li>
+                                <li><a href="">RHS Sectionals</a></li>
+                                <li><a href="">Corner Sofas</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul><h1>Bean Bags</h1></ul>
+                           </div>
+                           <div><ul><h1>Shoe Racks</h1>
+                            <li><a href="">Shoe cabinets</a></li>
+                            <li><a href="">Open Shoe Racks</a></li>
+                            <li><a href="">Shoe Rack & Seat</a></li>
+                            <li><a href="">Tilt Out Racks</a></li>
+                        </ul></div>
+                        <div><ul><h1>Book Shelves</h1></ul></div>
+                        
+                        </div>
+                </li>
+                <li class="active"><a href="">Matresses</a>
+                    <div class="sub-menu1">
+                        <div>
+                            <ul>
+                                <h1>Sofas</h1>
+                                <li><a href="/Mens.html">3 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">2 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">1 Seater Sofast</a></li>
+                                <li><a href="/Mens.html">Sofas Sets</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <h1>Gaming Chairs</h1>
+                                <li><a href="Gaming.html">Simple Base</a></li>
+                                <li><a href="Gaming.html">Recliner</a></li>
+                                <li><a href="Gaming.html">Sport Kit</a></li>
+                                <li><a href="Gaming.html">Automated</a></li>
+                                <li><a href="Gaming.html">Premium Av</a></li>
+                            </ul>
+                        </div>    
+                          <div>
+                            <ul>
+                                <h1>Beds</h1>
+                                <li><a href="beds.html">Queen Size Beds</a></li>
+                                <li><a href="beds.html">King Size Beds</a></li>
+                                <li><a href="beds.html">Single Beds</a></li>
+                                <li><a href="beds.html">Poster Beds</a></li>
+                                <li><a href="beds.html">Folding Beds</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Wardrobes</h1>
+                                <li><a href="wardrobe.html">1 Door</a></li>
+                                <li><a href="wardrobe.html">2 Door</a></li>
+                                <li><a href="wardrobe.html">3 Door</a></li>
+                                <li><a href="wardrobe.html">4 Door</a></li>
+                                <li><a href="wardrobe.html">4 + Door</a></li>
+                                <li><a href="wardrobe.html">Sliding Door</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Dressing Tables</h1>
+                                <li><a href="tables.html">Dressers</a></li>
+                                <li><a href="tables.html">Dressing Cabinets</a></li>
+                                <li><a href="tables.html">Dressing Units</a></li>
+                            </ul>
+                          </div>  
+                           <div>
+                            <ul>
+                                <h1>Study Tables</h1>
+                                <li><a href="tables.html">Writing Tables</a></li>
+                                <li><a href="tables.html">Computer Tables</a></li>
+                                <li><a href="tables.html">Hutch Desks</a></li>
+                                <li><a href="tables.html">Foldable Table</a></li>
+                                <li><a href="tables.html">Wall Mounted</a></li>
+                                <li><a href="tables.html">Portable Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Out Door</h1>
+                                <li><a href="">Swings</a></li>
+                                <li><a href=""></a>Hammocks</li>
+                                <li><a href=""></a>Tables</li>
+                                <li><a href=""></a>Table & Chair Sets</li>
+                                <li><a href=""></a>Seating</li>
+                                <li><a href=""></a>Plastic Chairs</li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Side Tables</h1>
+                                <li><a href="">End Tables</a></li>
+                                <li><a href="">C Chaped Tables</a></li>
+                                <li><a href="">Console Tables</a></li>
+                                <li><a href="">Nest of Tables</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Settees & Benches</h1>
+                                <li><a href="">Settees</a></li>
+                                <li><a href="">Benches</a></li>
+                                <li><a href="">Recamiers</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul>
+                                <h1>Sectional Sofas</h1>
+                                <li><a href="">LHS sectionals</a></li>
+                                <li><a href="">RHS Sectionals</a></li>
+                                <li><a href="">Corner Sofas</a></li>
+                            </ul>
+                           </div>
+                           <div>
+                            <ul><h1>Bean Bags</h1></ul>
+                           </div>
+                           <div><ul><h1>Shoe Racks</h1>
+                            <li><a href="">Shoe cabinets</a></li>
+                            <li><a href="">Open Shoe Racks</a></li>
+                            <li><a href="">Shoe Rack & Seat</a></li>
+                            <li><a href="">Tilt Out Racks</a></li>
+                        </ul></div>
+                        <div><ul><h1>Book Shelves</h1></ul></div>
+                        
+                        </div>
+                </li>
+                <li class="active"><a href="">Appliances</a></li>
+                <li class="active"><a href="">Pets</a></li>
+                <li class="active"><a href="">Modular</a></li>
+                <li class="active"><a href="">Gift Cards</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="cartbox">
+    <div class="row1">
+        
+        <div id="pc">
+            <h2>All Products</h2> <p>Your Cart<span id="pcount"></span></p>
+        </div>
+    </div>
+    <div class="smallContainer container">
+        <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+    <div id="cart-container">
+        <!-- Here Append All the cart Products  -->
+      </div>
+</div>
+</div>
+
+
+    <!-- ------- footer -------- --> 
+
+    <div class="footer">
+        <div class="container">
+            <div class="row3">
+                <div>
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Our Blog</li>
+                        <li>Careers</li>
+                        <li>Corporate Governance</li>
+                        <li>WoodCoaster In The News</li>
+                        <li>Find A Studio</li>
+                        <li>Gift Cards</li>
+                        <li>Brands</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Partners</h4>
+                    <ul>
+                        <li>Sell With Us</li>
+                        <li>Become a Franchisee</li>
+                        <li>Become a Wood Homie</li>
+                        <li>Design For Us</li>
+                        <li>WoodCoaster Market</li>
+                        <li>Login Merchant</li>
+                        <li>GST and You</li>
+                        <li>Corporate Enquiries</li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h4>Need Help?</h4>
+                    <ul>
+                        <li>Contact Us</li>
+                        <li>Return & Refund</li>
+                        <li>Track Your Order</li>
+                        <li>FAQs</li>
+                        <li>But on Phone</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Download App</h4>
+        
+                        <img src="/getapp.PNG" >
+                    
+                    <!-- <h4>KEEP IN TOUCH</h4>
+                    <img class="keep" src="/keepintouch.PNG"> -->
+                </div>
+                <div>
+                    <img src="/waranty.PNG" alt="">
+                </div>
+            </div>
+            <hr>
+            <div>
+                <img src="weac.png" alt="">
+            </div>
+            <hr>
+            <div class="footend">
+                <div>
+                    <ul>
+                        <li>Buy In Bulk</li>
+                        <li>Write A testimonial</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Whitehat</li>
+                        <li>Site Map</li>
+                        <li>Terms Of Use</li>
+                        <li>Privacy Policy</li>
+                        <li>Your Data & Security</li>
+                        <li>Grievance Redressal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</body>
+<script>
+    let Cart = JSON.parse(localStorage.getItem("cart"))||[];
+    let container = document.getElementById("cart-container");
+    let pc =document.getElementById("pcount")
+
+    function displayProduct(data) {
+      let total = document.getElementById("cart-total")
+      pc.innerText=`(${Cart.length}  Items)`
+      container.innerHTML= "";
+      Cart.forEach((product) => {
+        let card = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = product.img;
+
+        let brand = document.createElement("h3");
+        brand.textContent = product.name;
+
+        let category = document.createElement("p");
+        category.textContent = product.category;
+
+        let detail = document.createElement("p");
+        detail.textContent = product.desc;
+
+        let price = document.createElement("h5")
+        price.textContent = `$${product.price}`;
+
+        let quantity = document.createElement("span")
+        quantity.textContent = product.quantity
+
+        let remove = document.createElement("button")
+        remove.textContent = "Remove";
+
+        let increment = document.createElement("button")
+        increment.textContent = "+";
+
+        let decrement = document.createElement("button")
+        decrement.textContent = "-";
+        
+        let btndiv = document.createElement("div")
+        remove.addEventListener("click", () =>{
+          Cart=Cart.filter((ele) =>{
+              return ele.id!==product.id
+          })
+          localStorage.setItem("cart",JSON.stringify(Cart))
+          displayProduct()
+        });
+        increment.addEventListener("click", () =>{
+          product=product.quantity++
+          localStorage.setItem("cart",JSON.stringify(Cart))
+          displayProduct();
+        });
+        decrement.addEventListener("click", () =>{
+          if(product.quantity>1){
+          product=product.quantity--
+          localStorage.setItem("cart",JSON.stringify(Cart))
+          displayProduct()
+        }
+        });
+        btndiv.append(increment,quantity,decrement,remove)
+        card.append(img,brand,price,detail,category, btndiv);
+        container.append(card)
+      });
+
+      let sum=0
+      for(let i=0;i<Cart.length;i++){
+        sum+=Cart[i].price*Cart[i].quantity
+      }
+      total.textContent=sum
+
+    }
+    displayProduct()
+</script>
+</html>

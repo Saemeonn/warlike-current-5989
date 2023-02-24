@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Teen Online Shopping Home Page</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" >
+    
+</head>
+<body>
+    
+    <header id="header" class="container">
+        <!-- ------- Navigation Bar -------- --> 
+        <nav class="flex space-bet ">
+            <div class="left">
+                <a href="index.html"><img src="/WoodCoaster.png" alt="/"></a>
+                
+            </div>
+            <div class="right flex items-center">
+                <a href="productPage.html"><input placeholder="Search for products" class="searchbar" ></a>
+                <h3 class="help">HELP</h3>
+                <div class="profile mx-2 userprofile">
+                    <a href="login.html"> <img src="profileBlack.png" alt=""></a>
+                    <div class="user-menu">
+                        <div id="userinfo">
+
+                        </div>
+                        <hr>
+                        <ul>
+                            <li>My Acoount</li>
+                            <li>My Orders</li>
+                            <li>My Reviews</li>
+                            <li>My Wishlist</li>
+                            <li>My Wallet</li>
+                        </ul>
+                        <hr>
+                        <ul>
+                            <li>Edit Profile</li>
+                            <li id="logout" onclick="logoutf()">Logout</li>
+                        </ul>
+                    </div>
+                   
+                </div>
+                <div class="wishlist mx-2">
+                    <a href=""><img src="—Pngtree—vector heart icon_4187108.png" alt=""></a>
+                   
+                </div>
+                <div class="bag mx-2">
+                    <a href="cart.html"><img src="bag-png-33933.png" alt=""> </a>
+                </div>
+               
+                    <img src="menubar.PNG" class="menu-icon" onclick="menutoggle()"> 
+                </div>
+        </nav>
+        <nav class="cate">
+            <ul>
+                <li class="active"><a href="">Furniture </a>
+                    <div class="sub-menu1">
+                        <div>
+                            <ul>
+                                <h1>Sofas</h1>
+                                <li><a href="/Mens.html">3 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">2 Seater Sofas</a></li>
+                                <li><a href="/Mens.html">1 Seater Sofast</a></li>
+                                <li><a href="/Mens.html">Sofas Sets</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <h1>Gaming Chairs</h1>
+                                <li><a href="Gaming.html">Simple Base</a></li>
+                                <li><a href="Gaming.html">Recliner</a></li>
+                                <li><a href="Gaming.html">Sport Kit</a></li>
+                                <li><a href="Gaming.html">Automated</a></li>
+                                <li><a href="Gaming.html">Premium Av</a></li>
+                            </ul>
+                        </div>    
+                          <div>
+                            <ul>
+                                <h1>Beds</h1>
+                                <li><a href="beds.html">Queen Size Beds</a></li>
+                                <li><a href="beds.html">King Size Beds</a></li>
+                                <li><a href="beds.html">Single Beds</a></li>
+                                <li><a href="beds.html">Poster Beds</a></li>
+                                <li><a href="beds.html">Folding Beds</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Wardrobes</h1>
+                                <li><a href="wardrobe.html">1 Door</a></li>
+                                <li><a href="wardrobe.html">2 Door</a></li>
+                                <li><a href="wardrobe.html">3 Door</a></li>
+                                <li><a href="wardrobe.html">4 Door</a></li>
+                                <li><a href="wardrobe.html">4 + Door</a></li>
+                                <li><a href="wardrobe.html">Sliding Door</a></li>
+                            </ul>
+                          </div>  
+                          <div>
+                            <ul>
+                                <h1>Dressing Tables</h1>
+                                <li><a href="tables.html">Dressers</a></li>
+                                <li><a href="tables.html">Dressing Cabinets</a></li>
+                                <li><a href="tables.html">Dressing Units</a></li>
+                            </ul>
+                          </div>  
+                           <div>
+                            <ul>
+                                <h1>Study Tables</h1>
+                                <li><a href="tables.html">Writing Tables</a></li>
+                                <li><a href="tables.html">Computer Tables</a></li>
+                                <li><a href="tables.html">Hutch Desks</a></li>
+                                <li><a href="tables.html">Foldable Table</a></li>
+                                <li><a href="tables.html">Wall Mounted</a></li>
+                                <li><a href="tables.html">Portable Tables</a></li>
+                            </ul>
+                           </div>
+                        
+                        <div>
+                </li>
+                <li class="active"><a href=""> Home Décor</a></li>
+                <li class="active"><a href="">Lamps & Lighting</a></li>
+                <li class="active"><a href="">Kitchen & Dining</a></li>
+                <li class="active"><a href="">Furnishings</a></li>
+                <li class="active"><a href="">Matresses</a></li>
+                <li class="active"><a href="">Appliances</a></li>
+                <li class="active"><a href="">Pets</a></li>
+                <li class="active"><a href="">Modular</a></li>
+                <li class="active"><a href="">Gift Cards</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ------- Middle Section -------- --> 
+    <section class="container section1" id="fitwit">
+        <div class="ftdiv">
+            <img class="ftlogo" src="/FTLOGO.png" alt="/">
+        </div>
+        <div class="Slider">
+            <div class="carousel" data-flickity='{ "autoPlay": true }'>
+                <div class="carousel-cell"> <a href="productPage.html"><img src="/S1.png" alt=""></a></div>
+                <div class="carousel-cell"><a href="productPage.html"><img src="/S2.png" alt=""></a></div>
+                <div class="carousel-cell"><a href="productPage.html"><img src="/S3.png" alt=""></a></div>
+              </div>
+              <div>
+                <img class="S4" src="S4.png" alt="">
+              </div>
+        </div>
+       
+          <h1>Shop By Room</h1>
+       <a href="productPage.html"> <img class="homeImg" src="/sbr.png"></a>
+          <h1>What The Fry Deals</h1>
+       <a href="productPage.html"> <img class="homeImg" src="/wtf.png" alt=""></a>
+       <h1>Get Spring Ready</h1>
+        <a href="productPage.html"><img class="homeImg" src="/gsr.png" alt=""></a>
+        <h1>Inspiration From Our Blog</h1>
+       <a href="productPage.html"> <img class="homeImg" src="/ifo.png" alt=""></a>
+    </section>
+
+    <!-- ------- featured category -------- --> 
+    <div class="categories container">
+        <div class="mvc">
+            <div class="">
+                <div class="">
+                    <img src="https://ii1.pepperfry.com/media/catalog/product/b/l/494x544/black-metal-3-light-cluster-hanging-lights-by-foziq-black-metal-3-light-cluster-hanging-lights-by-fo-oa8rj7.jpg">
+                     <img src="https://ii3.pepperfry.com/media/catalog/product/b/l/494x544/blue-polyester-semisheer-7-feet-eyelet-curtain--set-of-2--by-cortina-blue-polyester-semisheer-7-feet-jpxlo6.jpg">
+                    <img src="https://ii2.pepperfry.com/media/catalog/product/a/l/494x544/alanzo-coffee-table-in-walnut-finish-by-casacraft-alanzo-coffee-table-in-walnut-finish-by-casacraft-mfd1ij.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------- featured products -------- --> 
+    <div class="container fproducts">
+        <div class="smallContainer">
+            <h2 class="title">Featured Products</h2>
+            <div class="row2">
+                <div class="col-4">
+                    <img src="https://ii1.pepperfry.com/media/catalog/product/b/e/494x544/belem-3-seater-sofa-in-charcoal-grey-colour-by-casacraft-belem-3-seater-sofa-in-charcoal-grey-colour-sxamke.jpg" >
+                    <h4>Belem 3 Seater Sofa</h4>
+    
+                    <p>$1100.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="https://ii1.pepperfry.com/media/catalog/product/l/u/494x544/luxury-design-blue-gold-terracotta-cluster-hanging-lamp-by-radhika-dahlan-luxury-design-blue-gold-te-9x7j7p.jpg" >
+                    <h4>Terracotta Cluster Hanging Lamp</h4>
+                    <p>$400.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="https://ii1.pepperfry.com/media/catalog/product/a/b/494x544/abdelnour-retro-wall-clock-in-brown-by-amberville-abdelnour-retro-wall-clock-in-brown-by-amberville-kpvb69.jpg" >
+                    <h4>Brown Analog Wall Clock</h4>
+                    <p>$250.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="https://ii3.pepperfry.com/media/catalog/product/c/a/494x544/carnival-3x-5-feet-carpet-by-littlelooms-carnival-3x-5-feet-carpet-by-littlelooms-g7rckw.jpg" >
+                    <h4>Carnival 3X 5 Feet Carpet</h4>
+                    <p>$340.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="https://ii2.pepperfry.com/media/catalog/product/g/r/494x544/grey-geometric-200-tc-cotton-blend-double-king-size-bedsheet-with-2-pillow-covers-by-arrabi-grey-geo-ds1cit.jpg" >
+                    <h4>Blue Abstract King Size Bedsheet</h4>
+                    <p>$500.00</p>
+                </div>
+            </div> 
+        </div>
+        
+        
+    </div>
+
+    <!-- ------- footer -------- --> 
+
+    <div class="footer">
+        <div class="container">
+            <div class="row3">
+                <div>
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Our Blog</li>
+                        <li>Careers</li>
+                        <li>Corporate Governance</li>
+                        <li>WoodCoaster In The News</li>
+                        <li>Find A Studio</li>
+                        <li>Gift Cards</li>
+                        <li>Brands</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Partners</h4>
+                    <ul>
+                        <li>Sell With Us</li>
+                        <li>Become a Franchisee</li>
+                        <li>Become a Wood Homie</li>
+                        <li>Design For Us</li>
+                        <li>WoodCoaster Market</li>
+                        <li>Login Merchant</li>
+                        <li>GST and You</li>
+                        <li>Corporate Enquiries</li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h4>Need Help?</h4>
+                    <ul>
+                        <li>Contact Us</li>
+                        <li>Return & Refund</li>
+                        <li>Track Your Order</li>
+                        <li>FAQs</li>
+                        <li>But on Phone</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Download App</h4>
+        
+                        <img src="/getapp.PNG" >
+                    
+                    <!-- <h4>KEEP IN TOUCH</h4>
+                    <img class="keep" src="/keepintouch.PNG"> -->
+                </div>
+                <!-- <div>
+                    <img src="/waranty.PNG" alt="">
+                </div> -->
+            </div>
+            <hr>
+            <div>
+                <img src="weac.png" alt="">
+            </div>
+            <hr>
+            <div class="footend">
+                <div>
+                    <ul>
+                        <li>Buy In Bulk</li>
+                        <li>Write A testimonial</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Whitehat</li>
+                        <li>Site Map</li>
+                        <li>Terms Of Use</li>
+                        <li>Privacy Policy</li>
+                        <li>Your Data & Security</li>
+                        <li>Grievance Redressal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let USData = JSON.parse(localStorage.getItem("user-data"))||[]
+    let info =document.getElementById("userinfo");
+    let disname = document.createElement("h3")
+    display(USData)
+        // < ------- Logging Out Function ------->
+        let logout = document.getElementById("logout")
+    var url = "/index.html"
+    
+
+    logout.onclick = () => {      
+       
+        // swal({
+        //     title: "Are you sure?",
+        //     text: "Once deleted, you will not be able to recover this imaginary file!",
+        //     icon: "warning",
+        //     buttons: true,
+        //     dangerMode: true,
+        // })
+        // .then((value) => {
+        //     if(value){
+        //         logoutf()
+        //     }
+        //     else{
+        //         swal(`The returned value is: ${value}`);
+        //     }
+        // });
+       
+        logoutf()
+        // return false;
+   
+    }
+  
+        // logout.addEventListener("click",function(){
+        //     display()
+        //     // alert("out")
+        // })
+    function logoutf(){
+        let text = "Are you sure you want to Logout.";
+         if (confirm(text) == true) {
+            text = "You pressed OK!";
+            localStorage.removeItem("user-data")
+            window.location = url;
+        } else {
+            text = "You canceled!";
+        } 
+         
+    //    localStorage.removeItem("user-data")
+    //    window.location = url;
+    }
+    function deleteel(){
+        localStorage.removeItem("user-data")
+       window.location = url;
+    }
+
+    getname(USData)
+    function getname(data) {
+        for(let i=0;i<1;i++){
+            for(let j=0;j<1;j++){
+                if(i===0 && j===0){
+                    disname.innerText = data[0].name[0].toUpperCase()
+                    console.log(disname.innerText);
+                }
+            }
+            
+        }
+    }
+    function display(data){
+      info.innerHTML=""
+      for(let i=0;i<1;i++){
+        let name = document.createElement("h5");
+        let logo = document.createElement("div")
+        let logoname = document.createElement("h3")
+        let number = document.createElement("p");
+        let hold = document.createElement("div")
+
+        name.innerText = data[0].name;
+        number.innerText = data[0].number
+        console.log(name.innerText);
+
+        logoname.innerText=disname
+
+       logo.append(disname)
+        hold.append(name,number)
+        info.append(logo,hold)
+      }
+    }
+
+</script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</html>
